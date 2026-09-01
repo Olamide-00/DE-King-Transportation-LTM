@@ -7,17 +7,29 @@ import { CarIcon, BikeIcon, TruckIcon } from "../components/Icons";
 import { FLEET, WA_MESSAGES, COVERAGE } from "../data/business";
 
 const FLEET_ICONS: Record<string, React.ReactNode> = {
-  "Sedan": <CarIcon />,
+  Sedan: <CarIcon />,
   "SUV / Executive": <CarIcon />,
-  "Motorcycle": <BikeIcon />,
+  Motorcycle: <BikeIcon />,
   "Van / Truck": <TruckIcon />,
 };
 
 const RIDE_STEPS = [
-  { t: "Send your trip details", d: "Pickup point, drop-off, date/time, and number of passengers — one message covers it." },
-  { t: "Get a price and ETA", d: "We confirm the fare and how soon a driver can get to you, before you commit to anything." },
-  { t: "Track by message", d: "Your driver's details are shared directly. No app, no waiting on a spinning map icon." },
-  { t: "Ride, arrive, done", d: "Pay on completion the way you'd expect — cash or transfer, confirmed with you upfront." },
+  {
+    t: "Share your trip details",
+    d: "Pickup point, drop-off, date/time, and number of passengers — that's all we need.",
+  },
+  {
+    t: "Get a price and ETA",
+    d: "We confirm the fare and how soon a driver can get to you, before you commit to anything.",
+  },
+  {
+    t: "Driver details sent to you",
+    d: "Your driver's name, vehicle, and contact are shared directly with you. No app, no waiting on a spinning map icon.",
+  },
+  {
+    t: "Ride, arrive, done",
+    d: "Pay on completion the way you'd expect — cash or transfer, confirmed with you upfront.",
+  },
 ];
 
 export default function BookRide() {
@@ -42,12 +54,15 @@ export default function BookRide() {
           </Reveal>
           <Reveal delay={150}>
             <p className="page-sub" style={{ marginBottom: 30 }}>
-              Intrastate trips across {COVERAGE.base}, and interstate runs to {COVERAGE.interstate.join(", ")} —
-              booked in a single WhatsApp message.
+              Intrastate trips across {COVERAGE.base}, and interstate runs to{" "}
+              {COVERAGE.interstate.join(", ")} — reserved directly, no app
+              required.
             </p>
           </Reveal>
           <Reveal delay={210}>
-            <WhatsAppCTA message={WA_MESSAGES.bookRide}>Book a ride on WhatsApp →</WhatsAppCTA>
+            <WhatsAppCTA message={WA_MESSAGES.bookRide}>
+              Book a ride
+            </WhatsAppCTA>
           </Reveal>
         </div>
       </section>
@@ -55,7 +70,9 @@ export default function BookRide() {
       {/* ── FLEET ── */}
       <section className="sec">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">choose your ride</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">choose your ride</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
               A vehicle for
@@ -67,7 +84,9 @@ export default function BookRide() {
             {FLEET.filter((f) => f.tag !== "Van / Truck").map((f, i) => (
               <Reveal key={f.name} delay={i * 70}>
                 <MagCard cls="fleet-card">
-                  <div className="svc-icon-wrap" style={{ marginBottom: 16 }}>{FLEET_ICONS[f.tag]}</div>
+                  <div className="svc-icon-wrap" style={{ marginBottom: 16 }}>
+                    {FLEET_ICONS[f.tag]}
+                  </div>
                   <div className="fleet-tag">{f.tag}</div>
                   <div className="fleet-name">{f.name}</div>
                   <div className="fleet-desc">{f.desc}</div>
@@ -81,10 +100,12 @@ export default function BookRide() {
       {/* ── HOW BOOKING WORKS ── */}
       <section className="sec sec-alt">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">how booking works</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">how it works</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
-              From message
+              From request
               <br />
               <span className="tg">to arrival.</span>
             </h2>
@@ -107,7 +128,7 @@ export default function BookRide() {
 
       <section className="cta-strip">
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <RoadCanvas intensity="low" />
+          <RoadCanvas intensity="normal" />
         </div>
         <div className="cta-strip-in">
           <Reveal>
@@ -118,9 +139,20 @@ export default function BookRide() {
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-              <WhatsAppCTA message={WA_MESSAGES.bookRide}>Book a ride →</WhatsAppCTA>
-              <Link to="/reservations" className="btn-s">Book ahead instead</Link>
+            <div
+              style={{
+                display: "flex",
+                gap: 14,
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <WhatsAppCTA message={WA_MESSAGES.bookRide}>
+                Book a ride
+              </WhatsAppCTA>
+              <Link to="/reservations" className="btn-s">
+                Book ahead instead
+              </Link>
             </div>
           </Reveal>
         </div>

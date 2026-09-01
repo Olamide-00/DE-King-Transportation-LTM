@@ -22,6 +22,9 @@ export const BUSINESS = {
   investorEmail: "Adebayooluwafemiadeola@gmail.com", // PLACEHOLDER
 };
 
+// This builds the link that quietly sends someone to WhatsApp when they
+// click a button — the word "WhatsApp" should never need to appear in
+// any visible button label or description; this is just the mechanism.
 export function waLink(message: string) {
   const text = encodeURIComponent(message);
   return `https://wa.me/${BUSINESS.whatsappNumber}?text=${text}`;
@@ -73,10 +76,16 @@ export const COVERAGE = {
 
 export const SERVICES = [
   {
+    slug: "kx-ride",
+    title: "KX Ride",
+    short: "Fast, affordable and reliable bike rides within the city.",
+    icon: "bike",
+  },
+  {
     slug: "book-a-ride",
     icon: "car",
     title: "Book a Ride",
-    short: "Intrastate and interstate trips, booked in one WhatsApp message.",
+    short: "Intrastate and interstate trips, booked in one simple message.",
     cta: "Book a ride",
     waKey: "bookRide" as const,
   },

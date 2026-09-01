@@ -3,7 +3,12 @@ import RoadCanvas from "../components/RoadCanvas";
 import Reveal from "../components/Reveal";
 import MagCard from "../components/MagCard";
 import WhatsAppCTA from "../components/WhatsAppCTA";
-import { PackageIcon, MapPinIcon, BikeIcon, TruckIcon } from "../components/Icons";
+import {
+  PackageIcon,
+  MapPinIcon,
+  BikeIcon,
+  TruckIcon,
+} from "../components/Icons";
 import { WA_MESSAGES, COVERAGE } from "../data/business";
 
 const MODES = [
@@ -24,17 +29,29 @@ const MODES = [
 ];
 
 const LOGISTICS_STEPS = [
-  { t: "Describe the package", d: "Size, weight (roughly), what it is, and where it's going — sent in one message." },
-  { t: "Get a delivery quote", d: "Priced by distance and package size, confirmed before pickup." },
-  { t: "We collect it", d: "A rider or driver picks up from the exact location you specify, at the time you agree." },
-  { t: "Delivery confirmed", d: "You get a message the moment it's dropped off — with the recipient's confirmation." },
+  {
+    t: "Describe the package",
+    d: "Size, weight (roughly), what it is, and where it's going — that's all it takes.",
+  },
+  {
+    t: "Get a delivery quote",
+    d: "Priced by distance and package size, confirmed before pickup.",
+  },
+  {
+    t: "We collect it",
+    d: "A rider or driver picks up from the exact location you specify, at the time you agree.",
+  },
+  {
+    t: "Delivery confirmed",
+    d: "You're notified the moment it's dropped off — with the recipient's confirmation.",
+  },
 ];
 
 export default function Logistics() {
   return (
     <>
       <section className="page-hero">
-        <RoadCanvas intensity="low" />
+        <RoadCanvas intensity="normal" />
         <div className="hero-scrim" />
         <div className="page-hero-in">
           <Reveal>
@@ -47,17 +64,19 @@ export default function Logistics() {
             <h1 className="page-h1">
               Send it. Receive it.
               <br />
-              <span className="tg">Track it by message.</span>
+              <span className="tg">Delivered with care.</span>
             </h1>
           </Reveal>
           <Reveal delay={150}>
             <p className="page-sub" style={{ marginBottom: 30 }}>
-              Door-to-door package delivery across {COVERAGE.base} and interstate — from a small
-              envelope to a full van load.
+              Door-to-door package delivery across {COVERAGE.base} and
+              interstate — from a small envelope to a full van load.
             </p>
           </Reveal>
           <Reveal delay={210}>
-            <WhatsAppCTA message={WA_MESSAGES.sendPackage}>Send a package on WhatsApp →</WhatsAppCTA>
+            <WhatsAppCTA message={WA_MESSAGES.sendPackage}>
+              Send a package
+            </WhatsAppCTA>
           </Reveal>
         </div>
       </section>
@@ -65,7 +84,9 @@ export default function Logistics() {
       {/* ── MODES ── */}
       <section className="sec">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">two ways to use logistics</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">two ways to use logistics</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
               Sending or
@@ -73,14 +94,22 @@ export default function Logistics() {
               <span className="tg">receiving — we've got it.</span>
             </h2>
           </Reveal>
-          <div className="svc-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)", marginTop: 40 }}>
+          <div
+            className="svc-grid"
+            style={{ gridTemplateColumns: "repeat(2, 1fr)", marginTop: 40 }}
+          >
             {MODES.map((m, i) => (
               <Reveal key={m.title} delay={i * 90}>
                 <MagCard cls="svc-card">
                   <div className="svc-icon-wrap">{m.icon}</div>
                   <div className="svc-title">{m.title}</div>
                   <div className="svc-desc">{m.desc}</div>
-                  <WhatsAppCTA message={WA_MESSAGES[m.waKey]} variant="secondary">{m.cta} →</WhatsAppCTA>
+                  <WhatsAppCTA
+                    message={WA_MESSAGES[m.waKey]}
+                    variant="secondary"
+                  >
+                    {m.cta}
+                  </WhatsAppCTA>
                 </MagCard>
               </Reveal>
             ))}
@@ -91,7 +120,9 @@ export default function Logistics() {
       {/* ── FLEET FOR LOGISTICS ── */}
       <section className="sec sec-alt">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">sized to the package</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">sized to the package</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
               From an envelope
@@ -99,21 +130,34 @@ export default function Logistics() {
               <span className="tg">to a full van load.</span>
             </h2>
           </Reveal>
-          <div className="fleet-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)", marginTop: 40 }}>
+          <div
+            className="fleet-grid"
+            style={{ gridTemplateColumns: "repeat(2, 1fr)", marginTop: 40 }}
+          >
             <Reveal delay={0}>
               <MagCard cls="fleet-card">
-                <div className="svc-icon-wrap" style={{ marginBottom: 16 }}><BikeIcon /></div>
+                <div className="svc-icon-wrap" style={{ marginBottom: 16 }}>
+                  <BikeIcon />
+                </div>
                 <div className="fleet-tag">Dispatch Rider</div>
                 <div className="fleet-name">Fast, Small Packages</div>
-                <div className="fleet-desc">Documents, small parcels, same-town urgent deliveries — the quickest option we have.</div>
+                <div className="fleet-desc">
+                  Documents, small parcels, same-town urgent deliveries — the
+                  quickest option we have.
+                </div>
               </MagCard>
             </Reveal>
             <Reveal delay={90}>
               <MagCard cls="fleet-card">
-                <div className="svc-icon-wrap" style={{ marginBottom: 16 }}><TruckIcon /></div>
+                <div className="svc-icon-wrap" style={{ marginBottom: 16 }}>
+                  <TruckIcon />
+                </div>
                 <div className="fleet-tag">Van / Truck</div>
                 <div className="fleet-name">Bulk &amp; Large Items</div>
-                <div className="fleet-desc">Furniture, multiple boxes, or bulk goods that need real boot space and multiple stops.</div>
+                <div className="fleet-desc">
+                  Furniture, multiple boxes, or bulk goods that need real boot
+                  space and multiple stops.
+                </div>
               </MagCard>
             </Reveal>
           </div>
@@ -123,10 +167,12 @@ export default function Logistics() {
       {/* ── STEPS ── */}
       <section className="sec">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">how delivery works</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">how delivery works</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
-              Four messages.
+              Four steps.
               <br />
               <span className="tg">One delivered package.</span>
             </h2>
@@ -149,7 +195,7 @@ export default function Logistics() {
 
       <section className="cta-strip">
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <RoadCanvas intensity="low" />
+          <RoadCanvas intensity="normal" />
         </div>
         <div className="cta-strip-in">
           <Reveal>
@@ -160,9 +206,20 @@ export default function Logistics() {
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-              <WhatsAppCTA message={WA_MESSAGES.sendPackage}>Send a package →</WhatsAppCTA>
-              <Link to="/coverage" className="btn-s">Check coverage first</Link>
+            <div
+              style={{
+                display: "flex",
+                gap: 14,
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <WhatsAppCTA message={WA_MESSAGES.sendPackage}>
+                Send a package
+              </WhatsAppCTA>
+              <Link to="/coverage" className="btn-s">
+                Check coverage first
+              </Link>
             </div>
           </Reveal>
         </div>

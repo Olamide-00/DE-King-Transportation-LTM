@@ -52,11 +52,20 @@ export default function Navbar() {
         ))}
       </div>
 
-      <a className="nav-cta" href={waLink(WA_MESSAGES.general)} target="_blank" rel="noreferrer">
-        Book on WhatsApp →
+      <a
+        className="nav-cta"
+        href={waLink(WA_MESSAGES.general)}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Book a Ride →
       </a>
 
-      <button className={`nav-burger ${open ? "open" : ""}`} onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
+      <button
+        className={`nav-burger ${open ? "open" : ""}`}
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Toggle menu"
+      >
         <span />
         <span />
         <span />

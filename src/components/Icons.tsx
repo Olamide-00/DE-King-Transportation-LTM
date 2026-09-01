@@ -1,6 +1,12 @@
 type P = { size?: number };
 
-const base = { fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+const base = {
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.6,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+};
 
 export function CarIcon({ size = 22 }: P) {
   return (
@@ -87,20 +93,42 @@ export function TruckIcon({ size = 22 }: P) {
   );
 }
 
-export function BikeIcon({ size = 22 }: P) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <circle cx="5.5" cy="17.5" r="3.5" />
-      <circle cx="18.5" cy="17.5" r="3.5" />
-      <path d="M5.5 17.5L10 8h5l3.5 9.5M10 8l3 5h-6" />
-    </svg>
-  );
-}
+// export function BikeIcon({ size = 22 }: P) {
+//   return (
+//     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+//       <circle cx="5.5" cy="17.5" r="3.5" />
+//       <circle cx="18.5" cy="17.5" r="3.5" />
+//       <path d="M5.5 17.5L10 8h5l3.5 9.5M10 8l3 5h-6" />
+//     </svg>
+//   );
+// }
 
 export function ArrowIcon({ size = 14 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 14 14" fill="none">
-      <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M2 12L12 2M12 2H4M12 2V10"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      />
+    </svg>
+  );
+}
+
+export function BikeIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="5.5" cy="17.5" r="3.5" />
+      <circle cx="18.5" cy="17.5" r="3.5" />
+      <path d="M12 17.5 15 9h4M5.5 17.5 9 10h3l3 4.5" />
+      <path d="M9 10 7.5 7h-2" />
     </svg>
   );
 }

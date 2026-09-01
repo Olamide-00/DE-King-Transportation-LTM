@@ -8,6 +8,7 @@ import {
   PackageIcon,
   CalendarIcon,
   ArrowIcon,
+  BikeIcon,
 } from "../components/Icons";
 import { SERVICES, WA_MESSAGES, COVERAGE } from "../data/business";
 
@@ -15,24 +16,25 @@ const ICONS: Record<string, React.ReactNode> = {
   car: <CarIcon />,
   package: <PackageIcon />,
   calendar: <CalendarIcon />,
+  bike: <BikeIcon />,
 };
 
-const STEPS = [
+const STANDARDS = [
   {
-    t: "Message us on WhatsApp",
-    d: "Tell us what you need — a ride, a package picked up, or a reservation — with pickup, drop-off, and timing.",
+    t: "Punctual, always",
+    d: "Every pickup and delivery runs to the time you're given, not an estimate.",
   },
   {
-    t: "We confirm details & price",
-    d: "You get a clear price and timing before anything is booked. No surprises.",
+    t: "Vetted, professional drivers",
+    d: "Every driver is verified, trained, and held to one standard of conduct.",
   },
   {
-    t: "We handle the trip",
-    d: "A driver or rider is assigned and you get updates by message until it's done.",
+    t: "Tracked from start to finish",
+    d: "You always know where your ride or package is until it's done.",
   },
   {
-    t: "Delivered, on time",
-    d: "Ride completed or package delivered — simple as that.",
+    t: "Discreet by default",
+    d: "Quiet, professional service — no fuss, no unnecessary contact.",
   },
 ];
 
@@ -59,14 +61,14 @@ export default function Home() {
           <Reveal delay={150}>
             <p className="hero-sub" style={{ margin: "0 auto 36px" }}>
               Rides, package delivery, and reservations across Ogun State and
-              beyond — booked directly on WhatsApp. A dedicated app is on the
-              way.
+              beyond — reserved in moments, handled with precision. A dedicated
+              app is on the way.
             </p>
           </Reveal>
           <Reveal delay={220}>
             <div className="hero-btns">
               <WhatsAppCTA message={WA_MESSAGES.bookRide}>
-                Book on WhatsApp →
+                Book a ride
               </WhatsAppCTA>
               <Link className="btn-s" to="/coverage">
                 See our coverage
@@ -79,14 +81,13 @@ export default function Home() {
               <span className="hero-badge">
                 Rides · Logistics · Reservations
               </span>
-              <span className="hero-badge">Booking via WhatsApp</span>
+              <span className="hero-badge">24/7 Availability</span>
               <span className="hero-badge">App coming soon</span>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
       <section className="sec">
         <div className="sec-in">
           <Reveal>
@@ -96,13 +97,13 @@ export default function Home() {
             <h2 className="sec-h2">
               Three ways to move,
               <br />
-              <span className="tg">all in one message.</span>
+              <span className="tg">reserved in seconds.</span>
             </h2>
           </Reveal>
           <Reveal delay={140}>
             <p className="sec-sub" style={{ marginBottom: 44 }}>
-              No app to download yet — every service below is one WhatsApp
-              message away.
+              No app to download yet — every service below can be reserved
+              directly, and our team takes it from there.
             </p>
           </Reveal>
 
@@ -131,28 +132,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ── */}
       <section className="sec sec-alt">
         <div className="sec-in">
           <Reveal>
-            <div className="eyebrow">how it works</div>
+            <div className="eyebrow">what to expect</div>
           </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
-              Four steps.
+              The De Kings
               <br />
-              <span className="tg">Zero app required.</span>
+              <span className="tg">standard.</span>
             </h2>
           </Reveal>
-          <div className="steps-list" style={{ marginTop: 30 }}>
-            {STEPS.map((s, i) => (
+          <div className="standards-grid" style={{ marginTop: 30 }}>
+            {STANDARDS.map((s, i) => (
               <Reveal key={s.t} delay={i * 80}>
-                <div className="step-row">
-                  <div className="step-num">{i + 1}</div>
-                  <div>
-                    <div className="step-t">{s.t}</div>
-                    <div className="step-d">{s.d}</div>
-                  </div>
+                <div className="standard-item">
+                  <div className="standard-t">{s.t}</div>
+                  <div className="standard-d">{s.d}</div>
                 </div>
               </Reveal>
             ))}
@@ -160,7 +157,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── COVERAGE TEASER ── */}
       <section className="sec">
         <div className="sec-in">
           <div
@@ -214,7 +210,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── APP COMING SOON ── */}
       <section className="sec sec-alt">
         <div className="sec-in">
           <Reveal>
@@ -225,8 +220,8 @@ export default function Home() {
                   The De Kings app is on the way.
                 </div>
                 <div className="app-coming-d">
-                  Booking rides and logistics will move in-app soon — for now,
-                  WhatsApp gets you the same service, one message at a time.
+                  Booking will move fully in-app soon — for now, our team
+                  handles every reservation personally.
                 </div>
               </div>
               <Link to="/investors" className="link-arrow">
@@ -237,10 +232,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA STRIP ── */}
       <section className="cta-strip">
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <RoadCanvas intensity="low" />
+          <RoadCanvas intensity="normal" />
         </div>
         <div className="cta-strip-in">
           <Reveal>
@@ -252,7 +246,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={100}>
             <WhatsAppCTA message={WA_MESSAGES.general}>
-              Message us on WhatsApp <ArrowIcon />
+              Reserve now <ArrowIcon />
             </WhatsAppCTA>
           </Reveal>
         </div>
