@@ -7,7 +7,7 @@
 
 export const BUSINESS = {
   name: "De Kings Transports and Logistics",
-  shortName: "De Kings",
+  shortName: "De Kings Transport",
   tagline: "Premium transport & logistics, on your terms.",
 
   // PLACEHOLDER — replace with the real WhatsApp Business number,
@@ -19,7 +19,7 @@ export const BUSINESS = {
   instagram: "@dekings_transport", // PLACEHOLDER
   address: "Abeokuta, Ogun State, Nigeria", // PLACEHOLDER — confirm exact office address
 
-  investorEmail: "invest@dekings.example", // PLACEHOLDER
+  investorEmail: "Adebayooluwafemiadeola@gmail.com", // PLACEHOLDER
 };
 
 export function waLink(message: string) {
