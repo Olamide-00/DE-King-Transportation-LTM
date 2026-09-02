@@ -82,7 +82,7 @@ export default function Home() {
                 Rides · Logistics · Reservations
               </span>
               <span className="hero-badge">24/7 Availability</span>
-              <span className="hero-badge">App coming soon</span>
+              <span className="hero-badge">De Kings app is coming soon</span>
             </div>
           </Reveal>
         </div>
