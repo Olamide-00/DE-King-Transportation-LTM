@@ -15,11 +15,11 @@ export const BUSINESS = {
   whatsappNumber: "2347010186732",
 
   phoneDisplay: "+234 701 018 6732", // PLACEHOLDER
-  email: "Adebayooluwafemiadeola@gmail.com", // PLACEHOLDER
+  email: "DeKingstransports28@gmail.com", // PLACEHOLDER
   instagram: "@dekings_transport", // PLACEHOLDER
   address: "Abeokuta, Ogun State, Nigeria", // PLACEHOLDER — confirm exact office address
 
-  investorEmail: "Adebayooluwafemiadeola@gmail.com", // PLACEHOLDER
+  investorEmail: "DeKingstransports28@gmail.com", // PLACEHOLDER
 };
 
 // This builds the link that quietly sends someone to WhatsApp when they
@@ -80,31 +80,46 @@ export const SERVICES = [
     title: "KX Ride",
     short: "Fast, affordable and reliable bike rides within the city.",
     icon: "bike",
+    cta: "Request a KX Ride",
+    waKey: "kxRide" as const,
   },
+
+  {
+    slug: "driver-requester",
+    title: "Request a Driver",
+    short:
+      "Need a driver? Request a trusted driver to take you where you need to go.",
+    icon: "car",
+    cta: "Request a Driver",
+    waKey: "driverRequest" as const,
+  },
+
   {
     slug: "book-a-ride",
     icon: "car",
     title: "Book a Ride",
     short: "Intrastate and interstate trips, booked in one simple message.",
-    cta: "Book a ride",
+    cta: "Book a Ride",
     waKey: "bookRide" as const,
   },
+
   {
     slug: "logistics",
     icon: "package",
     title: "Send & Receive Packages",
     short:
       "Door-to-door delivery and pickup-on-your-behalf, tracked by message.",
-    cta: "Send a package",
+    cta: "Send a Package",
     waKey: "sendPackage" as const,
   },
+
   {
     slug: "reservations",
     icon: "calendar",
     title: "Reservations",
     short:
       "Book ahead for events, airport runs, or multi-vehicle interstate trips.",
-    cta: "Make a reservation",
+    cta: "Make a Reservation",
     waKey: "reservation" as const,
   },
 ];
