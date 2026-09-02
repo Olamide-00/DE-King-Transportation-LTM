@@ -24,7 +24,7 @@ const RIDE_STEPS = [
   },
   {
     t: "Driver details sent to you",
-    d: "Your driver's name, vehicle, and contact are shared directly with you. No app, no waiting on a spinning map icon.",
+    d: "Your driver's name, vehicle, and contact are shared directly with you. No waiting on a spinning map icon.",
   },
   {
     t: "Ride, arrive, done",
@@ -55,8 +55,7 @@ export default function BookRide() {
           <Reveal delay={150}>
             <p className="page-sub" style={{ marginBottom: 30 }}>
               Intrastate trips across {COVERAGE.base}, and interstate runs to{" "}
-              {COVERAGE.interstate.join(", ")} — reserved directly, no app
-              required.
+              {COVERAGE.interstate.join(", ")} — reserved directly
             </p>
           </Reveal>
           <Reveal delay={210}>

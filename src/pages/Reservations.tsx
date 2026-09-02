@@ -6,9 +6,21 @@ import { CalendarIcon, CarIcon, MapPinIcon } from "../components/Icons";
 import { WA_MESSAGES } from "../data/business";
 
 const USE_CASES = [
-  { icon: <CalendarIcon />, title: "Events & Occasions", desc: "Weddings, owambe, church programs — reserve vehicles ahead so the day runs on schedule." },
-  { icon: <CarIcon />, title: "Multi-Vehicle Trips", desc: "Travelling as a group? Reserve more than one vehicle for the same route and time." },
-  { icon: <MapPinIcon />, title: "Airport & Long Interstate Runs", desc: "Book a specific pickup time in advance for early flights or long-distance travel." },
+  {
+    icon: <CalendarIcon />,
+    title: "Events & Occasions",
+    desc: "Weddings, owambe, church programs — reserve vehicles ahead so the day runs on schedule.",
+  },
+  {
+    icon: <CarIcon />,
+    title: "Multi-Vehicle Trips",
+    desc: "Travelling as a group? Reserve more than one vehicle for the same route and time.",
+  },
+  {
+    icon: <MapPinIcon />,
+    title: "Airport & Long Interstate Runs",
+    desc: "Book a specific pickup time in advance for early flights or long-distance travel.",
+  },
 ];
 
 export default function Reservations() {
@@ -33,19 +45,23 @@ export default function Reservations() {
           </Reveal>
           <Reveal delay={150}>
             <p className="page-sub" style={{ marginBottom: 30 }}>
-              For trips you can't leave to chance — reserve your vehicle and time slot in advance,
-              confirmed before the day arrives.
+              For trips you can't leave to chance — reserve your vehicle and
+              time slot in advance, confirmed before the day arrives.
             </p>
           </Reveal>
           <Reveal delay={210}>
-            <WhatsAppCTA message={WA_MESSAGES.reservation}>Make a reservation →</WhatsAppCTA>
+            <WhatsAppCTA message={WA_MESSAGES.reservation}>
+              Make a reservation →
+            </WhatsAppCTA>
           </Reveal>
         </div>
       </section>
 
       <section className="sec">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">when to reserve</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">when to reserve</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
               Book ahead
@@ -69,20 +85,33 @@ export default function Reservations() {
 
       <section className="sec sec-alt">
         <div className="sec-in">
-          <Reveal><div className="eyebrow">what to include</div></Reveal>
+          <Reveal>
+            <div className="eyebrow">what to include</div>
+          </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
               What we'll ask
               <br />
-              <span className="tg">for on WhatsApp.</span>
             </h2>
           </Reveal>
           <div className="steps-list" style={{ marginTop: 30 }}>
             {[
-              { t: "Occasion or reason for travel", d: "So we can match the right vehicle and, if needed, plan for luggage or extra stops." },
-              { t: "Date, time, and route", d: "Exact pickup time matters most for events and flights — the earlier you confirm, the better." },
-              { t: "Number of vehicles or passengers", d: "For group travel, we'll coordinate multiple vehicles to leave and arrive together." },
-              { t: "Confirmation, in writing", d: "You'll get your reservation confirmed by message — driver details follow closer to the date." },
+              {
+                t: "Occasion or reason for travel",
+                d: "So we can match the right vehicle and, if needed, plan for luggage or extra stops.",
+              },
+              {
+                t: "Date, time, and route",
+                d: "Exact pickup time matters most for events and flights — the earlier you confirm, the better.",
+              },
+              {
+                t: "Number of vehicles or passengers",
+                d: "For group travel, we'll coordinate multiple vehicles to leave and arrive together.",
+              },
+              {
+                t: "Confirmation, in writing",
+                d: "You'll get your reservation confirmed by message — driver details follow closer to the date.",
+              },
             ].map((s, i) => (
               <Reveal key={s.t} delay={i * 80}>
                 <div className="step-row">
@@ -111,7 +140,9 @@ export default function Reservations() {
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <WhatsAppCTA message={WA_MESSAGES.reservation}>Reserve on WhatsApp →</WhatsAppCTA>
+            <WhatsAppCTA message={WA_MESSAGES.reservation}>
+              Reserve on WhatsApp →
+            </WhatsAppCTA>
           </Reveal>
         </div>
       </section>
