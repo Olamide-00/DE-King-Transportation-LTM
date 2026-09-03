@@ -42,6 +42,8 @@ export const WA_MESSAGES = {
   general: "Hi De Kings, I have a question about your services.",
   investor:
     "Hi De Kings, I'm interested in learning more about investment opportunities.",
+  kxRide: "Hi De Kings, I'd like to request a KX Ride.",
+  driverRequest: "Hi De Kings, I'd like to request a driver.",
 };
 
 export const FLEET = [
@@ -70,22 +72,21 @@ export const FLEET = [
 export const COVERAGE = {
   base: "Ogun State",
   intrastate: ["Abeokuta", "Sagamu", "Ijebu-Ode", "Ota", "Ilaro", "Owode"],
-  interstate: ["Lagos", "Oyo", "Osun", "Ondo", "Ekiti", "Kwara", "Kano"],
   note: "Coverage list is illustrative — confirm exact towns/routes served before publishing.",
 };
 
 export const SERVICES = [
   {
-    slug: "kx-ride",
+    slug: "KxRide",
     title: "KX Ride",
-    short: "Fast, affordable and reliable bike rides within the city.",
+    short: "Fast, affordable and reliable bike rides between cities.",
     icon: "bike",
     cta: "Request a KX Ride",
     waKey: "kxRide" as const,
   },
 
   {
-    slug: "driver-requester",
+    slug: "DriverRequester",
     title: "Request a Driver",
     short:
       "Need a driver? Request a trusted driver to take you where you need to go.",
@@ -101,16 +102,6 @@ export const SERVICES = [
     short: "Intrastate and interstate trips, booked in one simple message.",
     cta: "Book a Ride",
     waKey: "bookRide" as const,
-  },
-
-  {
-    slug: "logistics",
-    icon: "package",
-    title: "Send & Receive Packages",
-    short:
-      "Door-to-door delivery and pickup-on-your-behalf, tracked by message.",
-    cta: "Send a Package",
-    waKey: "sendPackage" as const,
   },
 
   {

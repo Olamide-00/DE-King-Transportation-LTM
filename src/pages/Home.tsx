@@ -77,7 +77,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={280}>
             <div className="hero-badges">
-              <span className="hero-badge">Ogun State &amp; Interstate</span>
+              <span className="hero-badge">Ogun State</span>
               <span className="hero-badge">
                 Rides · Logistics · Reservations
               </span>
@@ -95,7 +95,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="sec-h2">
-              Three ways to move,
+              Four ways to move,
               <br />
               <span className="tg">reserved in seconds.</span>
             </h2>
@@ -175,7 +175,7 @@ export default function Home() {
                 <h2 className="sec-h2">
                   Based in {COVERAGE.base}.
                   <br />
-                  <span className="tg">Built for interstate.</span>
+                  <span className="tg">Built for intercity.</span>
                 </h2>
               </Reveal>
               <Reveal delay={140}>
@@ -196,10 +196,7 @@ export default function Home() {
                 className="coverage-tags"
                 style={{ justifyContent: "flex-end" }}
               >
-                {[
-                  ...COVERAGE.intrastate.slice(0, 4),
-                  ...COVERAGE.interstate.slice(0, 3),
-                ].map((c) => (
+                {[...COVERAGE.intrastate.slice(0, 4)].map((c) => (
                   <span key={c} className="coverage-tag">
                     {c}
                   </span>

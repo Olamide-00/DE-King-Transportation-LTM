@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo-emblem.png";
 import { waLink, WA_MESSAGES } from "../data/business";
 
 const LINKS = [
   { to: "/", label: "Home" },
-  { to: "/book-a-ride", label: "Book a Ride" },
-  { to: "/logistics", label: "Logistics" },
-  { to: "/reservations", label: "Reservations" },
-  { to: "/coverage", label: "Coverage" },
+  { to: "/KxRide", label: "KX Ride" },
+  { to: "/DriverRequester", label: "Request a Driver" },
   { to: "/investors", label: "Investors" },
   { to: "/contact", label: "Contact" },
 ];
@@ -16,7 +14,6 @@ const LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 16);
@@ -24,10 +21,6 @@ export default function Navbar() {
     window.addEventListener("scroll", fn);
     return () => window.removeEventListener("scroll", fn);
   }, []);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [navigate]);
 
   return (
     <nav className={`nav ${scrolled ? "on" : ""}`}>

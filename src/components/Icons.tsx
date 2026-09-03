@@ -3,7 +3,7 @@ type P = { size?: number };
 const base = {
   fill: "none",
   stroke: "currentColor",
-  strokeWidth: 1.6,
+  strokeWidth: 1.5,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
 };
@@ -11,10 +11,12 @@ const base = {
 export function CarIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13" />
-      <path d="M3 13h18v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
-      <circle cx="7.5" cy="17.5" r="1.5" />
-      <circle cx="16.5" cy="17.5" r="1.5" />
+      <path d="M4.5 15.5V12l1.3-3.8A2 2 0 0 1 7.7 6.9h8.6a2 2 0 0 1 1.9 1.3L19.5 12v3.5" />
+      <path d="M3 15.5h18v2.3a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-.8H6.2v.8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+      <path d="M5.8 12h12.4M8 9.2h8" />
+      <path d="M9 6.9l.6-1.6h4.8l.6 1.6" />
+      <circle cx="7.3" cy="17.4" r="1.3" />
+      <circle cx="16.7" cy="17.4" r="1.3" />
     </svg>
   );
 }
@@ -22,9 +24,9 @@ export function CarIcon({ size = 22 }: P) {
 export function PackageIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <path d="M21 8l-9-5-9 5 9 5 9-5z" />
-      <path d="M3 8v8l9 5 9-5V8" />
-      <path d="M12 13v8" />
+      <path d="M12 3.2l8.5 4.6v8.4L12 20.8l-8.5-4.6V7.8z" />
+      <path d="M3.5 7.8L12 12l8.5-4.2M12 12v8.8" />
+      <path d="M7.2 5.5l8.6 4.6M9 4.4l8.5 4.5" strokeWidth="1.1" />
     </svg>
   );
 }
@@ -32,8 +34,18 @@ export function PackageIcon({ size = 22 }: P) {
 export function CalendarIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <rect x="3" y="5" width="18" height="16" rx="2" />
-      <path d="M3 10h18M8 3v4M16 3v4" />
+      <rect x="3.2" y="5" width="17.6" height="15.5" rx="2" />
+      <path d="M3.2 9.6h17.6" />
+      <path d="M7.6 3v4M16.4 3v4" />
+      <path
+        d="M6.8 5.7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM17.2 5.7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"
+        fill="currentColor"
+        stroke="none"
+      />
+      <path
+        d="M7 13.2h2.2M11.4 13.2h2.2M15.8 13.2h1.8M7 16.6h2.2M11.4 16.6h2.2"
+        strokeWidth="1.3"
+      />
     </svg>
   );
 }
@@ -41,8 +53,16 @@ export function CalendarIcon({ size = 22 }: P) {
 export function MapPinIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22z" />
-      <circle cx="12" cy="9.5" r="2.4" />
+      <path d="M12 21.5s6.8-7.1 6.8-12.3A6.8 6.8 0 0 0 5.2 9.2c0 5.2 6.8 12.3 6.8 12.3z" />
+      <circle cx="12" cy="9.2" r="2.6" />
+      <ellipse
+        cx="12"
+        cy="21.6"
+        rx="3.4"
+        ry="0.7"
+        strokeWidth="1"
+        opacity="0.4"
+      />
     </svg>
   );
 }
@@ -58,8 +78,9 @@ export function WhatsAppIcon({ size = 22 }: P) {
 export function MailIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="M3 7l9 6 9-6" />
+      <rect x="2.8" y="5.2" width="18.4" height="13.6" rx="1.8" />
+      <path d="M3.3 6.5L12 13 20.7 6.5" />
+      <path d="M3 18l6.2-5.4M21 18l-6.2-5.4" strokeWidth="1.2" opacity="0.55" />
     </svg>
   );
 }
@@ -67,7 +88,9 @@ export function MailIcon({ size = 22 }: P) {
 export function PhoneIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 0-2z" />
+      <path d="M6.6 3.4h3.1l1.3 4.2-2.3 1.7a11.4 11.4 0 0 0 5.9 5.9l1.7-2.3 4.2 1.3v3.1c0 1.1-.9 2-2 1.9C10.6 18.7 5.3 13.4 4.7 5.4a2 2 0 0 1 1.9-2z" />
+      <path d="M15 3.2c1.9.2 3.5 1.8 3.7 3.7" strokeWidth="1.2" opacity="0.6" />
+      <path d="M14.6 5.6c1 .1 1.8.9 1.9 1.9" strokeWidth="1.2" opacity="0.6" />
     </svg>
   );
 }
@@ -75,9 +98,17 @@ export function PhoneIcon({ size = 22 }: P) {
 export function InstagramIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      <rect x="3" y="3" width="18" height="18" rx="5.5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <circle
+        cx="12"
+        cy="12"
+        r="1"
+        fill="currentColor"
+        stroke="none"
+        opacity="0.4"
+      />
+      <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -85,23 +116,15 @@ export function InstagramIcon({ size = 22 }: P) {
 export function TruckIcon({ size = 22 }: P) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <path d="M2 8h11v8H2z" />
-      <path d="M13 11h4l3 3v2h-7z" />
-      <circle cx="6" cy="18" r="1.6" />
-      <circle cx="17" cy="18" r="1.6" />
+      <path d="M1.5 7.5h11v9h-11z" />
+      <path d="M1.5 11h11M4.8 7.5v9" strokeWidth="1.1" opacity="0.55" />
+      <path d="M12.5 10.5h3.8l3.2 3v3h-7z" />
+      <path d="M16.3 10.5v3h3.2" strokeWidth="1.1" opacity="0.55" />
+      <circle cx="5.8" cy="17.3" r="1.7" />
+      <circle cx="17" cy="17.3" r="1.7" />
     </svg>
   );
 }
-
-// export function BikeIcon({ size = 22 }: P) {
-//   return (
-//     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-//       <circle cx="5.5" cy="17.5" r="3.5" />
-//       <circle cx="18.5" cy="17.5" r="3.5" />
-//       <path d="M5.5 17.5L10 8h5l3.5 9.5M10 8l3 5h-6" />
-//     </svg>
-//   );
-// }
 
 export function ArrowIcon({ size = 14 }: P) {
   return (
@@ -115,20 +138,24 @@ export function ArrowIcon({ size = 14 }: P) {
   );
 }
 
-export function BikeIcon() {
+export function BikeIcon({ size = 22 }: P) {
   return (
     <svg
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.6"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <circle cx="5.5" cy="17.5" r="3.5" />
-      <circle cx="18.5" cy="17.5" r="3.5" />
-      <path d="M12 17.5 15 9h4M5.5 17.5 9 10h3l3 4.5" />
-      <path d="M9 10 7.5 7h-2" />
+      <circle cx="5.5" cy="17.3" r="3.3" />
+      <circle cx="18.3" cy="17.3" r="3.3" />
+      <path d="M5.5 17.3 9.2 9.8h3.1l3 4.8 3-3.2h1.5" />
+      <path d="M9.2 9.8 7.6 6.9h-2" />
+      <path d="M12.3 9.8 14 7.4h2.2" strokeWidth="1.2" opacity="0.6" />
+      <path d="M18.3 17.3 15.3 14.6" />
     </svg>
   );
 }

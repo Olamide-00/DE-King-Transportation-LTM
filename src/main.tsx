@@ -11,6 +11,8 @@ import Coverage from "./pages/Coverage.tsx";
 import Investors from "./pages/Investors.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import KxRide from "./pages/KxRide.tsx";
+import DriverRequester from "./pages/DriverRequester.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -24,9 +26,11 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/coverage" element={<Coverage />} />
           <Route path="/investors" element={<Investors />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/KxRide" element={<KxRide />} />
+          <Route path="/DriverRequester" element={<DriverRequester />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );
