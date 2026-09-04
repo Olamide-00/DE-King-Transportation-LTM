@@ -54,8 +54,8 @@ export default function BookRide() {
           </Reveal>
           <Reveal delay={150}>
             <p className="page-sub" style={{ marginBottom: 30 }}>
-              Intrastate trips across {COVERAGE.base}, and interstate runs to{" "}
-              {COVERAGE.interstate.join(", ")} — reserved directly
+              Intrastate trips across {COVERAGE.base}, and interstate runs
+              to{" "}
             </p>
           </Reveal>
           <Reveal delay={210}>
