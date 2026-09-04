@@ -38,7 +38,7 @@ const STANDARDS = [
   },
   {
     t: "Covers your routes",
-    d: "Intrastate and interstate, wherever your day takes you.",
+    d: "Interstate and interstate, wherever your day takes you.",
   },
 ];
 

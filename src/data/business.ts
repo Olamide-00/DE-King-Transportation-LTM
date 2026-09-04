@@ -49,7 +49,7 @@ export const WA_MESSAGES = {
 export const FLEET = [
   {
     name: "Standard Ride",
-    desc: "Everyday intrastate trips across Ogun State — reliable, on-time, fairly priced.",
+    desc: "Everyday interstate trips across Ogun State — reliable, on-time, fairly priced.",
     tag: "Sedan",
   },
   {
@@ -58,8 +58,8 @@ export const FLEET = [
     tag: "SUV / Executive",
   },
   {
-    name: "Dispatch Rider",
-    desc: "Fast two-wheel delivery for small, urgent packages within town.",
+    name: "Solo Ride",
+    desc: "A quick, affordable motorcycle ride for one passenger perfect for short hops or urgent trips.",
     tag: "Motorcycle",
   },
   {
@@ -99,7 +99,7 @@ export const SERVICES = [
     slug: "book-a-ride",
     icon: "car",
     title: "Book a Ride",
-    short: "Intrastate and interstate trips, booked in one simple message.",
+    short: "Interstate trips, booked in one simple message.",
     cta: "Book a Ride",
     waKey: "bookRide" as const,
   },
