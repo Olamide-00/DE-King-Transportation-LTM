@@ -1,33 +1,60 @@
 import RoadCanvas from "../components/RoadCanvas";
 import Reveal from "../components/Reveal";
-import { MailIcon, PhoneIcon, InstagramIcon, MapPinIcon, ArrowIcon } from "../components/Icons";
+import {
+  MailIcon,
+  PhoneIcon,
+  InstagramIcon,
+  ArrowIcon,
+} from "../components/Icons";
 import { BUSINESS, WA_MESSAGES, waLink } from "../data/business";
 
 const CHANNELS = [
-  { icon: <PhoneIcon />, label: "phone / whatsapp", val: BUSINESS.phoneDisplay, href: `tel:${BUSINESS.whatsappNumber}` },
-  { icon: <MailIcon />, label: "email", val: BUSINESS.email, href: `mailto:${BUSINESS.email}` },
-  { icon: <InstagramIcon />, label: "instagram", val: BUSINESS.instagram, href: "#" },
-  { icon: <MapPinIcon />, label: "based in", val: BUSINESS.address, href: "/coverage" },
+  {
+    icon: <PhoneIcon />,
+    label: "phone / whatsapp",
+    val: BUSINESS.phoneDisplay,
+    href: `tel:${BUSINESS.whatsappNumber}`,
+  },
+  {
+    icon: <MailIcon />,
+    label: "email",
+    val: BUSINESS.email,
+    href: `mailto:${BUSINESS.email}`,
+  },
+  {
+    icon: <InstagramIcon />,
+    label: "instagram",
+    val: BUSINESS.instagram,
+    href: "#",
+  },
 ];
 
 const OPTIONS = [
   { t: "Book a ride", msg: WA_MESSAGES.bookRide },
   { t: "Send a package", msg: WA_MESSAGES.sendPackage },
-  { t: "Someone's picking up a package for me", msg: WA_MESSAGES.receivePackage },
+  {
+    t: "Someone's picking up a package for me",
+    msg: WA_MESSAGES.receivePackage,
+  },
   { t: "Make a reservation", msg: WA_MESSAGES.reservation },
   { t: "Something else", msg: WA_MESSAGES.general },
 ];
 
 export default function Contact() {
   return (
-    <section className="sec" style={{ minHeight: "100vh", paddingTop: 140, position: "relative" }}>
+    <section
+      className="sec"
+      style={{ minHeight: "100vh", paddingTop: 140, position: "relative" }}
+    >
       <div style={{ position: "absolute", inset: 0, opacity: 0.4 }}>
         <RoadCanvas intensity="low" />
       </div>
       <div className="sec-in" style={{ position: "relative", zIndex: 2 }}>
         <div className="cont-grid">
           <div>
-            <Reveal><div className="eyebrow">get in touch</div></Reveal>
+            <Reveal>
+              <div className="eyebrow">get in touch</div>
+            </Reveal>
             <Reveal delay={80}>
               <h1 className="sec-h2">
                 Talk to us,
@@ -37,7 +64,8 @@ export default function Contact() {
             </Reveal>
             <Reveal delay={140}>
               <p className="sec-sub" style={{ marginBottom: 40 }}>
-                Every booking today happens on WhatsApp — but here's every way to reach De Kings.
+                Every booking today happens on WhatsApp — but here's every way
+                to reach De Kings.
               </p>
             </Reveal>
             {CHANNELS.map((item, i) => (
@@ -56,11 +84,22 @@ export default function Contact() {
           <Reveal delay={180}>
             <div className="wa-panel">
               <div className="wa-panel-t">What do you need?</div>
-              <div className="wa-panel-d">Pick one — it opens WhatsApp with your message pre-filled, ready to send.</div>
+              <div className="wa-panel-d">
+                Pick one — it opens WhatsApp with your message pre-filled, ready
+                to send.
+              </div>
               {OPTIONS.map((o) => (
-                <a key={o.t} className="wa-option" href={waLink(o.msg)} target="_blank" rel="noreferrer">
+                <a
+                  key={o.t}
+                  className="wa-option"
+                  href={waLink(o.msg)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span className="wa-option-t">{o.t}</span>
-                  <span className="wa-option-arrow"><ArrowIcon /></span>
+                  <span className="wa-option-arrow">
+                    <ArrowIcon />
+                  </span>
                 </a>
               ))}
             </div>

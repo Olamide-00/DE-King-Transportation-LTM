@@ -50,9 +50,6 @@ export default function Footer() {
               <Link className="flnk" to="/reservations">
                 Reservations
               </Link>
-              <Link className="flnk" to="/coverage">
-                Coverage
-              </Link>
             </div>
           </div>
 

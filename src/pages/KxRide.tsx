@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import RoadCanvas from "../components/RoadCanvas";
 import Reveal from "../components/Reveal";
 import WhatsAppCTA from "../components/WhatsAppCTA";
@@ -76,9 +75,6 @@ export default function KxRide() {
               <WhatsAppCTA message={WA_MESSAGES.kxRide}>
                 Request a KX Ride
               </WhatsAppCTA>
-              {/* <Link className="btn-s" to="/coverage">
-                See our coverage
-              </Link> */}
             </div>
           </Reveal>
         </div>

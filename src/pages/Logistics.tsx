@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import RoadCanvas from "../components/RoadCanvas";
 import Reveal from "../components/Reveal";
 import MagCard from "../components/MagCard";
@@ -217,9 +216,9 @@ export default function Logistics() {
               <WhatsAppCTA message={WA_MESSAGES.sendPackage}>
                 Send a package
               </WhatsAppCTA>
-              <Link to="/coverage" className="btn-s">
-                Check coverage first
-              </Link>
+              <WhatsAppCTA message={WA_MESSAGES.receivePackage}>
+                Arrange a pickup
+              </WhatsAppCTA>
             </div>
           </Reveal>
         </div>

@@ -70,9 +70,6 @@ export default function Home() {
               <WhatsAppCTA message={WA_MESSAGES.bookRide}>
                 Book a ride
               </WhatsAppCTA>
-              <Link className="btn-s" to="/coverage">
-                See our coverage
-              </Link>
             </div>
           </Reveal>
           <Reveal delay={280}>

@@ -74,9 +74,6 @@ export default function DriverRequester() {
               <WhatsAppCTA message={WA_MESSAGES.driverRequest}>
                 Request a Driver
               </WhatsAppCTA>
-              {/* <Link className="btn-s" to="/coverage">
-                See our coverage
-              </Link> */}
             </div>
           </Reveal>
         </div>
