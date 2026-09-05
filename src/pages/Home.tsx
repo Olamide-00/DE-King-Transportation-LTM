@@ -182,11 +182,6 @@ export default function Home() {
                   to you.
                 </p>
               </Reveal>
-              <Reveal delay={180}>
-                <Link to="/coverage" className="link-arrow">
-                  See full coverage map →
-                </Link>
-              </Reveal>
             </div>
             <Reveal delay={120}>
               <div
